@@ -2,6 +2,9 @@ zcat gencode.v36.annotation.gtf.gz | grep -v '^#' |awk '$2=="HAVANA"&& $3=="gene
 
 zcat gencode.v36.annotation.gtf.gz | grep -v '^#' |awk '$2=="HAVANA"&& $3=="gene"{print $10,$12,$14}'| awk -F \" '{print $2,$4,$6}'>gencode2.txt
 
+cat gecode.all.txt | awk '{print $7}' | sort | uniq -c| grep -v -w 1
+grep -w 去掉部分匹配的
+
 
 
 # awk_sed
