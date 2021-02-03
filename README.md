@@ -1,3 +1,7 @@
+zcat gencode.v36.annotation.gtf.gz | grep -v '^#' |awk '$2=="HAVANA"&& $3=="gene"{print $2,$3,$4,$5}'>gencode1.gtf
+
+
+
 # awk_sed
 # Bioinformatics one-liners
 
