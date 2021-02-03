@@ -1,5 +1,7 @@
 zcat gencode.v36.annotation.gtf.gz | grep -v '^#' |awk '$2=="HAVANA"&& $3=="gene"{print $2,$3,$4,$5}'>gencode1.gtf
 
+zcat gencode.v36.annotation.gtf.gz | grep -v '^#' |awk '$2=="HAVANA"&& $3=="gene"{print $10,$12,$14}'| awk -F \" '{print $2,$4,$6}'>gencode2.txt
+
 
 
 # awk_sed
